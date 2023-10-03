@@ -1,0 +1,54 @@
+.App {
+
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+input{
+    border-color: transparent;
+}
+
+.InQuery{
+    padding: 16px;
+    margin: 16px;
+    background-color: rgb(54, 54, 70);
+    border-radius: 12px;
+}
+
+.inputPrin {
+    display: flex;
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    color: #FFF;
+    outline: none;
+    margin-right: 8px;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+button{
+    padding-left: 10px;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cadastroEmp{
+    color: #111010;
+    background-color: #111010;
+}
+
+
+.Linkrouter{
+    color: #161616;
+}
+
+

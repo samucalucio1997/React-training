@@ -1,0 +1,20 @@
+nav{
+    height: 5vh;
+    background-color: #808080;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: #cacaca;
+}
+
+ul{
+    text-decoration: none;
+    color: #cacaca;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
