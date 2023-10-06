@@ -18,3 +18,7 @@ ul{
     justify-content: space-between;
     list-style: none;
 }
+li{
+    justify-content: space-between;
+    padding: 10px;
+}

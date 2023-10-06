@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import api from '../ComApi/api'
+import { Navigate } from 'react-router-dom'
 import './Cadastro.css'
 
 
 export function Cadastro(){
     const [login,setLogin] = useState('')
     const [senha,setSenha] = useState('')
+    const [cnpj,setCnpj] = useState('')
+    const [razao,setRazao] = useState('')
+    const [nome_Fantasia,setFantasia] = useState('')
 
     
     async function handleMain(){
@@ -14,7 +18,8 @@ export function Cadastro(){
                 login:login,
                 senha:senha
             })
-            
+
+
          } catch (error) {
             
          }

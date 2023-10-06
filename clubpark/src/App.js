@@ -10,6 +10,7 @@ function App() {
   const [login, setLogin] = useState('')
   const [password, setPassword] = useState('')
   const [loged, setLoged]=useState(false)
+  const [empre, setEmpre] = useState({})
   
   async function handleMain() {
 
@@ -20,8 +21,12 @@ function App() {
           senha:password
         }
       })
-      console.log(resp.data)
-      setLoged(true)
+      await api.get('/root/FatuAnuais').then((e) => {
+        setEmpre(e.data)
+      })
+      
+      
+      setLoged(resp.data)
      
       // window.open('/Cnpj')
     } catch (error) {
@@ -55,12 +60,12 @@ function App() {
 
           <button onClick={handleMain}>Entrar</button>
         </div>
-              {loged ? <Navigate to="/Cnpj" /> : null} {/* Redirect to "/Cnpj" if loged is true*/}
+              {empre.length===0 && <Navigate to="/Empre" />}
+              {loged && <Navigate to="/Cnpj" />} {/* Redirect to "/Cnpj" if loged is true*/}
             <div className="cadastroEmp">
                 <Link to="/Cadastro">Não sou cadastrado</Link>
             </div>
       </div>
-    
   );
 }
 

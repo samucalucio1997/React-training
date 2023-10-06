@@ -47,7 +47,7 @@ export function Cnpj() {
   }
  
   FormatedData = Data.map(item => [item.mes, item.faturamento]);
-  FormatedData.unshift(["Mês", "Faturamento"]);
+  FormatedData.unshift(["mes", "faturamento"]);
   
   // const data=[
   //   ["mes", "ano", "faturamento"]
