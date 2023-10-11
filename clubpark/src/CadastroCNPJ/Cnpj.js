@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from '../ComApi/api';
 import Chart from "react-google-charts";
+import { Link } from "react-router-dom";
 
 export function Cnpj() {
   const [fatura, setFatura] = useState([]);
@@ -30,6 +31,7 @@ export function Cnpj() {
     Felpa();
     grafith();
   }, []);
+
   
   // console.log(Data)
   
@@ -71,8 +73,8 @@ export function Cnpj() {
       <h1>Tabela de faturamento nos 3 últimos anos</h1>
       <main>
         <p>2021: {fatura[0]}</p>
-        {fatura[1]=!null&&(<p>2022:{fatura[1]}</p>)}
-        {fatura[2]==!null&&(<span>2023:{fatura[2]}</span>)}
+        <p>2022:{fatura[1]}</p>
+        <span>2023:{fatura[2]}</span>
       </main>
       <br/>
       <br/>
@@ -86,6 +88,7 @@ export function Cnpj() {
       <span>{item.faturamento}</span>
     </div>
   ))}
+      <Link to="/Empre">Registrar faturamento</Link>
       <Chart
       chartType="Line"
       width="81%"

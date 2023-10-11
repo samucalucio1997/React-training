@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes,Route, Link, Navigate} from 'react-router-dom';
 import api from './ComApi/api'
-import {Cadastro} from './CadastroCPF/Cadastro'
 import './App.css'
 
 
@@ -10,7 +9,7 @@ function App() {
   const [login, setLogin] = useState('')
   const [password, setPassword] = useState('')
   const [loged, setLoged]=useState(false)
-  const [empre, setEmpre] = useState({})
+  const [empre, setEmpre] = useState([])
   
   async function handleMain() {
 
@@ -20,13 +19,16 @@ function App() {
           login:login,
           senha:password
         }
-      })
-      await api.get('/root/FatuAnuais').then((e) => {
-        setEmpre(e.data)
-      })
+      }).then(e => {setLoged(e.data)})
       
       
-      setLoged(resp.data)
+      if(loged){
+        await api.get('/root/FatuAnuais').then((e) => {
+          setEmpre(e.data)
+        })
+      }
+      
+      
      
       // window.open('/Cnpj')
     } catch (error) {
@@ -60,8 +62,8 @@ function App() {
 
           <button onClick={handleMain}>Entrar</button>
         </div>
-              {empre.length===0 && <Navigate to="/Empre" />}
-              {loged && <Navigate to="/Cnpj" />} {/* Redirect to "/Cnpj" if loged is true*/}
+              {loged && <Navigate to="/Cnpj" />}
+              {/* empre.length==0 && loged && <Navigate to="/Empre" />*/} 
             <div className="cadastroEmp">
                 <Link to="/Cadastro">Não sou cadastrado</Link>
             </div>

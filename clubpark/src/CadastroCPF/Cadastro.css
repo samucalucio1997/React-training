@@ -1,4 +1,21 @@
 
-.container{
-    
+.Container{
+    width: 50vw;
+    justify-content:center;
+    padding-left: 25%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    align-items:center;
+}
+form{
+    width: 50vw;
+    align-items: center;
+}
+.acionar{
+    text-align: left;
+}
+.form-group{
+    justify-content:left;
+    text-align: left;
 }

@@ -1,5 +1,4 @@
 .App {
-
     height: 40vh;
     display: flex;
     flex-direction: column;
@@ -42,12 +41,16 @@ button{
 }
 
 .cadastroEmp{
-    color: #646464;
+    color: #202020;
+    font-size: large;
 }
-
-
-.Linkrouter{
+a{
+  color: #0e0e0e;  
+}
+a:hover{
+    text-decoration: none;
     color: #161616;
 }
+
 
 

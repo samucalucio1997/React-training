@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { Navbar } from './NavMenu/Navbar';
-import {Empre} from './CadastroEmpresa/Empre'
+import { Empre } from './CadastroFatu/Empre';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Cadastro } from './CadastroCPF/Cadastro';
 import {Cnpj} from './CadastroCNPJ/Cnpj'
