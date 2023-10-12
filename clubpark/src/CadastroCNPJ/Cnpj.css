@@ -3,3 +3,10 @@
     justify-content: center;
     align-items: center;
 }
+.card{
+    width: 5vw;
+}
+
+.card-body{
+    width: 2%;
+}

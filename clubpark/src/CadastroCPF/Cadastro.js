@@ -34,44 +34,52 @@ export function Cadastro(){
                 login:login,
                 senha:senha
             }).catch(err => console.log(err))
- 
-            await api.get(`/root/Auth`,{
-                headers:{
-                    login:login,
-                    senha:senha
-                }
-            }).catch(err => console.log(err))
-
-            await api.post(`/root/cadastroEm`,{
-              cnpj:cnpj,
-              razaoSocial:razao,
-              nome_Fantasia:nome_Fantasia,
-              areaAtuacao:areaAtuacao,
-              tempoAtu:tempoAtu,
-              capitalSocial:capitalSocial,
-              qtdFuncCLT:qtdFuncCLT,
-              fatura:fatura,
-              qtdFunc3:qtdFunc3,
-              estagirs:estagirs,
-              nSocio:nSocio,
-              socios:socios,
-              wSite:wSite,
-              insta:insta,
-              face:face,
-              twitter:twitter,
-              linkedin:linkedin,
-              whats:whats,
-              email:emails
-            }).then(e => {
-              if(e){
-                setT(true)
-              }
-            })
-         } catch (error) {
+         
+          } catch (error) {
             
-         }
+          }
+          handleMain2()  
     }
     
+    async function handleMain2(){
+      try {
+        await api.get(`/root/Auth`,{
+          headers:{
+            login:login,
+            senha:senha
+          }
+        })
+      
+
+        await api.post(`/root/cadastroEm`,{
+          cnpj:cnpj,
+          razaoSocial:razao,
+          nome_Fantasia:nome_Fantasia,
+          areaAtuacao:areaAtuacao,
+          tempoAtu:tempoAtu,
+          capitalSocial:capitalSocial,
+          qtdFuncCLT:qtdFuncCLT,
+          fatura:fatura,
+          qtdFunc3:qtdFunc3,
+          estagirs:estagirs,
+          nSocio:nSocio,
+          socios:socios,
+          wSite:wSite,
+          insta:insta,
+          face:face,
+          twitter:twitter,
+          linkedin:linkedin,
+          whats:whats,
+          email:emails
+        }).then(e => {
+          if(e){
+            setT(true)
+          }
+        }).catch(err => console.log(err))
+      } catch (error) {
+        
+      }
+    }
     
     return(
         <>
@@ -108,6 +116,7 @@ export function Cadastro(){
                  <label for="exampleInputPassword1">Tempo de atuação</label>
                  <input type="text" onChange={e => setTempoAtu(e.target.value)} class="form-control" id="exampleInputPassword1" placeholder="tempo no mercado"/>
                </div>
+
 
                <div class="form-group">
                  <label for="exampleInputPassword1">capitalSocial</label>
@@ -172,7 +181,7 @@ export function Cadastro(){
                <div class="form-group">
                  <label for="exampleInputPassword1">Email da empresa</label>
                  <input type="text" onChange={e => setEmails(e.target.value)} class="form-control" id="exampleInputPassword1" placeholder="Email da empresa"/>
-               </div>
+               </div>           
 
                </form>
                <div className='acionar'>

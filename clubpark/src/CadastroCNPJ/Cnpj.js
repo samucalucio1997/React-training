@@ -78,6 +78,11 @@ export function Cnpj() {
       </main>
       <br/>
       <br/>
+      <div class="card">
+            <div class="card-body">
+              <Link to="/Empre">Registrar faturamento</Link>
+            </div>
+      </div>
       <br/>
       <br/>
       <div className="Tebela ">
@@ -88,7 +93,6 @@ export function Cnpj() {
       <span>{item.faturamento}</span>
     </div>
   ))}
-      <Link to="/Empre">Registrar faturamento</Link>
       <Chart
       chartType="Line"
       width="81%"
