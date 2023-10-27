@@ -1,12 +1,26 @@
-.conteudo{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+*{
+    margin:0;
+    box-sizing: border-box;
 }
-.card{
-    width: 5vw;
+.conteudo{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100vw;
+    text-align: center;
+    /* justify-content: center;
+    align-items: center; */
+}
+main{
+    justify-content: left;
+
+}
+.Tabela{
+    padding-bottom: 15%;
+}
+.conteTab{
+    /* padding-bottom: 5%; */
+}
+.grafico{
+    margin-left: 25%;
 }
 
-.card-body{
-    width: 2%;
-}

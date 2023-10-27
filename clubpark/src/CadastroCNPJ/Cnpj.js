@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from '../ComApi/api';
 import Chart from "react-google-charts";
+import './Cnpj.css'
 import { Link } from "react-router-dom";
 
 export function Cnpj() {
@@ -70,21 +71,24 @@ export function Cnpj() {
   
   return (
     <div className="conteudo">
+    <main>
       <h1>Tabela de faturamento nos 3 últimos anos</h1>
-      <main>
-        <p>2021: {fatura[0]}</p>
-        <p>2022:{fatura[1]}</p>
-        <span>2023:{fatura[2]}</span>
-      </main>
-      <br/>
-      <br/>
+      <div class="card" property="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><p>2021: {fatura[0]}</p></li>
+          <li class="list-group-item"><p>2022:{fatura[1]}</p></li>
+          <li class="list-group-item"><span>2023:{fatura[2]}</span></li>
+        </ul>
+      </div>
+    </main>
+      
+      
       <div class="card">
             <div class="card-body">
               <Link to="/Empre">Registrar faturamento</Link>
             </div>
       </div>
-      <br/>
-      <br/>
+      
       <div className="Tebela ">
            <h1>Ultimo trimestre</h1>
            {Ano.map((item, index) => (
@@ -93,6 +97,8 @@ export function Cnpj() {
       <span>{item.faturamento}</span>
     </div>
   ))}
+      </div>
+      <div className="grafico">
       <Chart
       chartType="Line"
       width="81%"
