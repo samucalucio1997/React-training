@@ -12,9 +12,7 @@ const routers = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
-      
-    ]
+    
   },
   {
     path:"/cadastro",
