@@ -1,0 +1,49 @@
+@import url(https://fonts.google.com/specimen/Overpass/about?query=Overpass);
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+nav{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    padding-top: 2%; 
+    padding-bottom: 3%;
+    color: #5181db;
+}
+
+.formulario{
+    width: 45vw;
+    margin-left: 28vw;
+    justify-content: center;
+    text-align: center;
+}
+
+.ff{
+    padding: 12px;
+    text-align: center;
+}
+
+.ff input{
+  background-color: #E5EEFF;
+}
+
+section{
+    text-align: center;
+}
+
+button{
+    border-radius: 18px;
+    padding: 0.8em;
+    margin-top: 30px;
+    border: none;
+    color: white;
+    background-color: rgb(185, 100, 251);
+}
+
+

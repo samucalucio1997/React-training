@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+nav{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    text-align: center;
+    margin-top: 8vh;
+    color: #5585E1;
+}
+.formulario{
+    text-align: center;
+    margin-top: 12vh;
+}
+.preview_Image{
+    margin-top: 20px;
+}
+.preview_Image img{
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: rgb(185, 100, 251);
+    color: white;
+    border: 1px solid rgb(185, 100, 251);
+    border-radius: 8px;
+  }
+  
+  /* Ocultar o botão de arquivo padrão */
+  input[type="file"] {
+    display: none;
+  }
